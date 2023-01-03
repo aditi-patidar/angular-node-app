@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Patrick Smith",
+    "email": "patrick@ex.com",
+    "password": "patrick123",
+    "passwordConfirm": "patrick123"
+  },
+  {
+    "name": "Mike Austin",
+    "email": "mike@ex.com",
+    "password": "mike1234",
+    "passwordConfirm": "mike1234"
+  },
+  {
+    "name": "Grishma Mohan",
+    "email": "grishma@ex.com",
+    "password": "grishma123",
+    "passwordConfirm": "grishma123"
+  },
+  {
+    "name": "Ben Grey",
+    "email": "ben@ex.com",
+    "password": "ben12345",
+    "passwordConfirm": "ben12345"
+  },
+  {
+    "name": "Jacopo  Johnson",
+    "email": "jacopo@ex.com",
+    "password": "jacopo123",
+    "passwordConfirm": "jacopo123"
+  }
+]
