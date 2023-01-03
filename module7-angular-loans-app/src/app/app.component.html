@@ -1,0 +1,71 @@
+<!-- Created by: Aditi Patidar
+Date: Nov 21, 2022
+-->
+<!-- Header and all the components will render here -->
+<header>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <img src="../assets/images/loans-logo.jpeg" width="40" alt="...">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/all-loans" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">All loans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/my-loans" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">My loans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/new-loan" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">New loan</a>
+          </li>
+          <li class="nav-item">
+            <form class="d-flex" role="search">
+              <!-- <input class="form-control me-2" type="search" placeholder="Search loans" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button> -->
+              <div class="input-group col-2">
+                <input type="text" class="form-control" placeholder="Search loan" aria-label="Search loan" aria-describedby="button-addon2">
+                <button class="btn btn-outline-light" type="button" id="button-addon2">
+                  <fa-icon [icon]="faSearch"></fa-icon>
+                </button>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" *ngIf="!loggedIn">
+              <a class="nav-link" routerLink="/sign-up" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sign up</a>
+            </li>
+            <li class="nav-item" *ngIf="!loggedIn">
+              <a class="nav-link" routerLink="/log-in" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Log in</a>
+            </li>
+            <li class="nav-item" *ngIf="loggedIn">
+              <a class="nav-link fw-bold">Hello {{userName}}</a>
+            </li>
+            <li class="nav-item" *ngIf="loggedIn">
+              <a class="nav-link" [routerLink]="[]" (click)="logOut()">Log out</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <div class="container pt-10">
+    <!-- Alert component will show/hide based on showAlert flag. Do not include this omponent anywhere else.
+      It will be centrally managed from here only. -->
+    <ng-template [ngIf]="showAlert">
+      <app-alert [alert]="alert"></app-alert>
+    </ng-template>
+    <!-- Render other components with router -->
+    <router-outlet></router-outlet>
+  </div>
+</body>
+

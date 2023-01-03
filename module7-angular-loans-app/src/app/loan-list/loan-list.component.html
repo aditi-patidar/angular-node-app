@@ -1,0 +1,31 @@
+<!--
+  Created by: Aditi Patidar
+  Date: Nov 24, 2022
+  UI to list all the loans
+ -->
+<table class="table table-striped">
+  <thead class="table-info">
+    <tr>
+      <th>#</th>
+      <th>Customer name</th>
+      <th>Loan type</th>
+      <th>Phone number</th>
+      <th class="text-end">Amount</th>
+      <th>Interest</th>
+      <th>Loan term years</th>
+      <th class="text-end">Total payment with interest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let loan of loans; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{loan.customerName}}</td>
+      <td>{{loan.loanType}}</td>
+      <td>{{loan.phoneNumber}}</td>
+      <td class="text-end">{{loan.loanAmount.$numberDecimal}}</td>
+      <td>{{loan.interestRate.$numberDecimal}}%</td>
+      <td>{{loan.loanTermYears}}</td>
+      <td class="text-end">${{loan.totalPayment}}</td>
+    </tr>
+  </tbody>
+</table>

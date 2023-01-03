@@ -1,0 +1,65 @@
+<!--  Created by: Aditi Patidar
+  Date: Nov 25, 2022
+  new loan form -->
+<form (ngSubmit)="onCreateNewLoan()" #f="ngForm">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-8">
+      <div class="card mb-3">
+        <div class="card-header fw-bold">New loan</div>
+        <div class="card-body">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-12">
+              <div class="mb-3">
+                <label for="phoneNumber">Phone number</label>
+                <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" ngModel>
+              </div>
+              <div class="mb-3">
+                <label for="address">Address</label>
+                <input name="address" type="text" class="form-control" id="address" ngModel>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mb-3">
+            <div class="col-lg-4 col-md-4">
+              <label for="loanAmount">Loan amount</label>
+              <input name="loanAmount" type="number" class="form-control" id="loanAmount" ngModel>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <label for="loanTermYears">Loan term years</label>
+              <input name="loanTermYears" type="number" class="form-control" id="loanTermYears" ngModel>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <label for="interestRate">Interest rate</label>
+              <input name="interestRate" type="number" class="form-control" id="interestRate" min="0.1" step="0.1" ngModel>
+            </div>
+          </div>
+          <div class="row justify-content-center mb-3">
+            <div class="col-lg-6 col-md-6">
+              <label for="loanType">Loan type</label>
+              <select name="loanType" class="form-select" id="loanType" ngModel>
+                <option selected disabled>Select loan type</option>
+                <option value="Home loan">Home loan</option>
+                <option value="Car loan">Car loan</option>
+                <option value="Personal loan">Personal loan</option>
+                <option value="Student loan">Student loan</option>
+              </select>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <label for="startDate">Start date</label>
+              <input name="startDate" type="date" class="form-control" id="startDate" ngModel>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="mb-3">
+                <label for="description">Description</label>
+                <input name="description" type="text" class="form-control" id="description" ngModel>
+              </div>
+              <button type="submit" class="btn btn-success">Create loan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

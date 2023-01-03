@@ -1,0 +1,31 @@
+<!--  Created by: Aditi Patidar
+  Date: Nov 23, 2022
+  sign up form UI -->
+<form (ngSubmit)="onSignUp()" #f="ngForm">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-8">
+      <div class="card mb-3">
+        <div class="card-header fw-bold">Sign up</div>
+        <div class="card-body">
+            <div class="mb-3">
+              <label for="name">Name</label>
+              <input name="name" type="text" class="form-control" id="name" ngModel>
+            </div>
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input name="email" type="email" class="form-control" id="email" ngModel>
+            </div>
+            <div class="mb-3">
+              <label for="password">Password</label>
+              <input name="password" type="password" class="form-control" id="password" ngModel>
+            </div>
+            <div class="mb-3">
+              <label for="passwordConfirm">Confirm Password</label>
+              <input name="passwordConfirm" type="password" class="form-control" id="passwordConfirm" ngModel>
+            </div>
+            <button type="submit" class="btn btn-success">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

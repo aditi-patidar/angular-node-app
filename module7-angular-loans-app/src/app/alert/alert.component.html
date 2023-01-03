@@ -1,0 +1,8 @@
+<!-- Created by: Aditi Patidar
+  Date: Nov 22, 2022
+  This is the UI for the alert
+-->
+<ngb-alert #selfClosingAlert [type]="alert.type" (closed)="close()">{{ alert.message }}
+  <button type="button" aria-label="Close" class="btn-close"></button>
+</ngb-alert>
+
